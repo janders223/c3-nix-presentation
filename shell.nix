@@ -2,6 +2,6 @@
 
 pkgs.mkShell {
   nativeBuildInputs = with pkgs; [
-    haskellPackages.patat
-  ]
+    kitty
+  ];
 }

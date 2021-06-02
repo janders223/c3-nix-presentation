@@ -1,21 +1,19 @@
 {
-  description = "A very basic flake";
+  description = "C3 Nix Presentation";
 
 	inputs = {
 		nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 		utils.url = "github:numtide/flake-utils";
 	};
 
-  outputs = { self, nixpkgs }@inputs: {
+  outputs = { self, nixpkgs, ... }@inputs:
 	inputs.utils.lib.eachDefaultSystem (system:
 	let
-		nixpkgs = inputs.nixpkgs;
-		pkgs = import nixpkgs { inherit system; };
-
+    pkgs = import nixpkgs { inherit system; config = {
+      allowBroken = true; };
+    };
 	in
-	rec {
+	{
 		devShell = import ./shell.nix { inherit pkgs; };
 	});
-
-  };
 }
