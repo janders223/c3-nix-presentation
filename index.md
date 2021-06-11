@@ -194,3 +194,9 @@ exa --long --no-user $NIX_PROFILE/bin
 ```bash
 $NIX_PROFILE/bin/hello
 ```
+
+---
+
+# nix as a package manager
+
+## nix shell
