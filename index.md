@@ -197,6 +197,26 @@ $NIX_PROFILE/bin/hello
 
 ---
 
+#nix as a package manager
+
+## nix profile
+
+```bash
+exa --long --no-user ~/.nix-profile
+```
+
+. . .
+
+```bash
+exa --long --no-user ~/.nix-profile/bin
+```
+
+<!--
+How does nix manage all of this? With the concept of the nix profile, which is just an elaborate system of symlinks into ~/.nix-profile. As you can see it's just symlinks all the way down to files that reside in the nix store.
+-->
+
+---
+
 # nix as a package manager
 
 ## nix shell
