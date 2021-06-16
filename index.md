@@ -220,3 +220,72 @@ How does nix manage all of this? With the concept of the nix profile, which is j
 # nix as a package manager
 
 ## nix shell
+
+- semi-analogous to a virtual environment in python
+- build once development environment for the entire project stack
+- based on `default.nix` for nix build projects and `shell.nix` otherwise
+- integrations based on `direnv` for effortless usage
+- makes it easy to _try_ out a particular package
+
+. . .
+
+```bash
+cat shell.nix
+```
+
+---
+
+# nix as a package manager
+
+## nix shell
+
+### Another example
+
+```bash
+cat $HOME/src/storbi_api/shell.nix
+```
+
+---
+
+# nix as a package manager
+
+## nix flakes
+
+- Introduced in 2.4-pre version
+- Entirely new cli
+- `flake.lock` file to lock dependencies
+
+. . .
+
+```bash
+cat $HOME/src/infra-cli/flake.nix
+```
+
+. . .
+
+```bash
+cat $HOME/src/infra-cli/flake.lock
+```
+
+---
+
+# nix as a package manager
+
+## Get started today
+
+```shell
+$ curl -L https://nixos.org/nix/install | sh
+```
+
+---
+
+# nix as a package manager
+
+- https://nixos.org/manual/nix/stable/
+- https://nixos.org/manual/nixpkgs/stable/
+- https://nixos.wiki/wiki/Nix
+- https://nixos.org/guides/nix-pills/index.html
+
+---
+
+# Questions?
