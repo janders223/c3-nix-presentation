@@ -8,8 +8,6 @@ patat:
       replace: true
   margins:
     top: 50
-    left: 20
-    right: 20
 
 ---
 
