@@ -1,19 +1,19 @@
 {
-  description = "C3 Nix Presentation";
+  description = "Nix Presentation";
 
-	inputs = {
-		nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-		utils.url = "github:numtide/flake-utils";
-	};
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    utils.url = "github:numtide/flake-utils";
+  };
 
   outputs = { self, nixpkgs, ... }@inputs:
-	inputs.utils.lib.eachDefaultSystem (system:
-	let
+  inputs.utils.lib.eachDefaultSystem (system:
+  let
     pkgs = import nixpkgs { inherit system; config = {
       allowBroken = true; };
     };
-	in
-	{
-		devShell = import ./shell.nix { inherit pkgs; };
-	});
+  in
+  {
+    devShell = import ./shell.nix { inherit pkgs; };
+  });
 }

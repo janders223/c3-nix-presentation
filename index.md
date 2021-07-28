@@ -183,14 +183,33 @@ nix-env -q
 
 . . .
 
+See that it is on the path
 ```bash
-exa --long --no-user $NIX_PROFILE/bin
+which hello
 ```
 
 . . .
 
+
+And executable
 ```bash
-$NIX_PROFILE/bin/hello
+hello
+```
+
+. . .
+
+
+Removing a package
+```bash
+nix-env -e hello
+```
+
+. . .
+
+
+And see now that it is removed
+```bash
+nix-env -q
 ```
 
 ---
@@ -240,7 +259,7 @@ cat shell.nix
 ### Another example
 
 ```bash
-cat $HOME/src/storbi_api/shell.nix
+cat $HOME/src/kong/shell.nix
 ```
 
 ---
@@ -256,14 +275,34 @@ cat $HOME/src/storbi_api/shell.nix
 . . .
 
 ```bash
-cat $HOME/src/infra-cli/flake.nix
+cat flake.nix
 ```
 
 . . .
 
 ```bash
-cat $HOME/src/infra-cli/flake.lock
+cat flake.lock
 ```
+
+---
+
+# nix for managing a macbook
+
+## nix-darwin
+
+- Manage globally installed packages
+- Manage sytem configuration options
+- Manage launchagent
+- and much more…
+
+https://github.com/LnL7/nix-darwin
+
+. . .
+
+```bash
+cat  $HOME/.nixpkgs/darwin-configuration.nix
+```
+
 
 ---
 
