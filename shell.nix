@@ -1,7 +1,10 @@
 { pkgs ? import <nixpkgs> {} }:
 
 pkgs.mkShell {
-  nativeBuildInputs = with pkgs; [
-    tree
-  ];
+    nativeBuildInputs = with pkgs; [
+        tree
+    ];
+
+    shellHook = ''
+    '';
 }
